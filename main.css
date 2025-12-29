@@ -996,13 +996,15 @@ a:focus, button:focus, input:focus, select:focus, textarea:focus {
 .carousel-dots button.active { background: #333; } 
 
 /* contacts section */
-.contact-info-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;    
-    gap: 20px;;
-    justify-content:space-evenly;
-    align-items: center;
+.contact-info-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
 }
+
 .contact-info-phone-container{
     display: block;
     min-height: 200px;
@@ -1029,7 +1031,10 @@ a:focus, button:focus, input:focus, select:focus, textarea:focus {
         font-weight: 800;
         margin: 2px;
         font-size: 1.2rem;
+        
     }
+    
+
 }
 
 .contact-info-email-container{
@@ -1100,5 +1105,12 @@ a:focus, button:focus, input:focus, select:focus, textarea:focus {
     border-radius: 20px;
     padding: 5px;
     border: #333 solid 0.5;
+}
 
+@media (max-width: 1020px) {
+    .contact-info-phone-container a,
+    .contact-info-email-container a {
+        font-size: .85rem;
+    }
+    
 }
